@@ -24,3 +24,9 @@ y_pred = model.predict(X_test)
 # Calculate the accuracy of the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.2f}")
+
+# Save the model to a pickle file
+with open('iris_model.pkl', 'wb') as file:
+    pickle.dump(model, file)
+
+print("Model saved as iris_model.pkl")  
